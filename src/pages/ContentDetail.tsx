@@ -8,7 +8,7 @@ import PageTransition from '../components/PageTransition';
 
 export default function ContentDetail() {
   const { type, id } = useParams<{ type: string; id: string }>();
-  const { toggleSave, isSaved } = useUser();
+  const { isSaved } = useUser();
   const { getComments, addComment, toggleLikeComment } = useCommunity();
   const { showToast } = useToast();
   const { content: allContent } = useContent();

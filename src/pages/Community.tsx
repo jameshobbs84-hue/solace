@@ -29,7 +29,7 @@ const spaceInfo: Record<string, { title: string; description: string }> = {
 export default function Community() {
   const [searchParams] = useSearchParams();
   const space = searchParams.get('space') as CommunitySpace | null;
-  const { posts, addPost, toggleLikePost, toggleReaction } = useCommunity();
+  const { posts, addPost, toggleReaction } = useCommunity();
   const { showToast } = useToast();
   const [newPost, setNewPost] = useState('');
   const [pickerOpenFor, setPickerOpenFor] = useState<string | null>(null);

@@ -9,7 +9,7 @@ import PageTransition from '../components/PageTransition';
 
 export default function CommunityThread() {
   const { threadId } = useParams<{ threadId: string }>();
-  const { getPost, addReply, toggleLikePost, toggleLikeReply, toggleReaction, toggleReplyReaction } = useCommunity();
+  const { getPost, addReply, toggleReaction, toggleReplyReaction } = useCommunity();
   const { showToast } = useToast();
   const [replyText, setReplyText] = useState('');
   const [pickerOpenFor, setPickerOpenFor] = useState<string | null>(null);

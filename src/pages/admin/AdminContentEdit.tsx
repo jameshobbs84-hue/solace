@@ -10,7 +10,7 @@ const allTopics = ['Sleep', 'Anxiety', 'Movement', 'Relationships', 'Nutrition',
 export default function AdminContentEdit() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const { getContentById, updateContent, content } = useContent();
+  const { getContentById, updateContent } = useContent();
   const { showToast } = useToast();
   const item = getContentById(id || '');
 

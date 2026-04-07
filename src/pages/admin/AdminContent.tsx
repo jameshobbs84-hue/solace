@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useContent } from '../../context/ContentContext';
-import { useToast } from '../../components/Toast';
 
 type StatusFilter = 'all' | 'published' | 'draft';
 
@@ -9,7 +8,6 @@ export default function AdminContent() {
   const { content: allContent } = useContent();
   const [statusFilter, setStatusFilter] = useState<StatusFilter>('all');
   const [searchQuery, setSearchQuery] = useState('');
-  const { showToast } = useToast();
   const navigate = useNavigate();
 
   const contentWithStatus = allContent.map((item) => ({

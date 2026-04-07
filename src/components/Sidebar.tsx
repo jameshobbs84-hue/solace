@@ -45,9 +45,7 @@ function NavItem({
     <NavLink
       to={to}
       end={end}
-      className={({ isActive }) =>
-        `flex items-center rounded-lg transition-colors no-underline`
-      }
+      className={`flex items-center rounded-lg transition-colors no-underline`}
       style={({ isActive }) => ({
         width: 232,
         gap: 10,

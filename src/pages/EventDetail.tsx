@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { events } from '../data/content';
 import { useToast } from '../components/Toast';
@@ -268,7 +268,7 @@ function RSVPModal({ event, onClose }: { event: typeof events[number]; onClose: 
     <div
       className="fixed inset-0 flex items-center justify-center z-[100]"
       style={{ backgroundColor: 'rgba(0,0,0,0.4)' }}
-      onClick={onClose}
+      onClick={() => onClose()}
     >
       <div
         className="bg-white relative flex flex-col items-center text-center"
@@ -390,7 +390,7 @@ function RSVPModal({ event, onClose }: { event: typeof events[number]; onClose: 
     <div
       className="fixed inset-0 flex items-center justify-center z-[100]"
       style={{ backgroundColor: 'rgba(0,0,0,0.4)' }}
-      onClick={onClose}
+      onClick={() => onClose()}
     >
       <div
         className="bg-white relative flex flex-col"
@@ -406,7 +406,7 @@ function RSVPModal({ event, onClose }: { event: typeof events[number]; onClose: 
       >
         {/* Dismiss button — pill style matching dashboard tour */}
         <button
-          onClick={onClose}
+          onClick={() => onClose()}
           className="absolute border-none cursor-pointer font-medium hover:opacity-70 transition"
           style={{
             top: 12,
