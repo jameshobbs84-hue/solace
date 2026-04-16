@@ -51,7 +51,7 @@ export default function Carousel({
   const btnRadius = smallArrows ? 16 : 20;
 
   return (
-    <div className="overflow-hidden">
+    <div>
       {/* Header Row */}
       <div className="flex items-center justify-between" style={{ height: 44 }}>
         <h2
@@ -97,7 +97,7 @@ export default function Carousel({
       <div
         ref={trackRef}
         className="flex overflow-x-auto hide-scrollbar scroll-smooth"
-        style={{ gap: 20, marginTop: 12, paddingBottom: 8 }}
+        style={{ gap: 20, marginTop: 12, paddingBottom: 12, paddingLeft: 4, paddingRight: 4, marginLeft: -4, marginRight: -4 }}
       >
         {children}
       </div>

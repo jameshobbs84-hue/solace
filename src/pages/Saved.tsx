@@ -20,7 +20,7 @@ export default function Saved() {
       </h1>
 
       {savedItems.length > 0 ? (
-        <div className="grid mt-6" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', columnGap: 24, rowGap: 20 }}>
+        <div className="grid mt-6" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', columnGap: 24, rowGap: 20, padding: '4px 4px 12px', margin: '0 -4px' }}>
           {savedItems.map(item => (
             <ContentCard key={item.id} item={item} />
           ))}
